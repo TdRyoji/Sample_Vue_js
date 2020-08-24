@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue.js!'
+    message1: 'Hello Vue.js!',
+    message2: 'You loaded this page on ' + new Date().toLocaleString()
   }
 })
