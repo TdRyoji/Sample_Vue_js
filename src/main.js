@@ -5,7 +5,7 @@ import Vue from 'vue'
 Vue.config.productionTip = false
 
 var app1 = new Vue({
-  el: '#app1',
+  el: '#app-1',
   data: {
     message1: 'Hello Vue.js!',
     message2: 'You loaded this page on ' + new Date().toLocaleString()
@@ -13,12 +13,24 @@ var app1 = new Vue({
 })
 
 var app2 = new Vue({
-  el: '#app2',
+  el: '#app-2',
   data: {
     list: [
       { text: 'Learn Javascript' },
       { text: 'Learn Vue' },
       { text: 'Read 3 books a week'}
     ]
+  }
+})
+
+var app3 = new Vue({
+  el: '#app-3',
+  data: {
+    num: 0
+  },
+  methods: {
+    handleClick: function () {
+      this.num = (this.num + 1) % 3
+    }
   }
 })

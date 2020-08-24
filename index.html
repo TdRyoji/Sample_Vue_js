@@ -8,13 +8,13 @@
     <title>test-vue</title>
   </head>
   <body>
-    <div id="app1">
+    <div id="app-1">
       <h1>{{ message1 }}</h1>
       <span v-bind:title="message2">
         Hover your mouse here
       </span>
     </div>
-    <div id="app2">
+    <div id="app-2">
       <span>
         I have to do these tasks:
       </span>
@@ -24,6 +24,20 @@
         </li>
       </ol>
     </div>
-
+    <!-- <div id="app-3">
+      <input type="radio" name="radio3" onclick="app3.num=0">
+      <input type="radio" name="radio3" onclick="app3.num=1" checked>
+      <input type="radio" name="radio3" onclick="app3.num=2">
+      <span v-if="num==0"> Left </span>
+      <span v-else-if="num==1"> Center </span>
+      <span v-else> Right</span>
+    </div> -->
+    <div id="app-3">
+      <button v-on:click="handleClick">
+        <span v-if="num==0">Hello!</span>
+        <span v-else-if="num==1">How are you?</span>
+        <span v-else>Bye!</span>
+      </button>
+    </div>
   </body>
 </html>
