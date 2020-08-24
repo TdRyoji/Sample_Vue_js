@@ -8,11 +8,21 @@
     <title>test-vue</title>
   </head>
   <body>
-    <div id="app">
+    <div id="app1">
       <h1>{{ message1 }}</h1>
       <span v-bind:title="message2">
         Hover your mouse here
       </span>
+    </div>
+    <div id="app2">
+      <span>
+        I have to do these tasks:
+      </span>
+      <ol>
+        <li v-for="item in list">
+          {{ item.text }}
+        </li>
+      </ol>
     </div>
 
   </body>
